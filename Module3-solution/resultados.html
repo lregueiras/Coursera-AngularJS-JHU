@@ -1,0 +1,33 @@
+
+<div class="row">
+<div class="col-xs-12" >
+  <div class="alert alert-danger" ng-if="lista.found.length===0 && lista.myVar">Nothing was found!</div>
+
+  <h4 ng-if="lista.found.length>0">Results list ({{lista.found.length}})</h4>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-info"  ng-if="lista.found.length>0">
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-3">Short name</div>
+      <div class="col-xs-3">Description</div>
+      <div class="col-xs-3"></div>
+    </div>
+    </li>
+    <li class="list-group-item" ng-repeat="category in lista.found track by $index">
+      <div class="row">
+      <div class="col-xs-3">
+        {{ category.name }}
+      </div>
+      <div class="col-xs-3">
+        {{ category.short_name }}
+      </div>
+      <div class="col-xs-3">
+       {{ category.description }}
+      </div>
+        <div class="col-xs-3">
+      <button ng-click="lista.onRemove({index: $index});">Don't want this one!</button>
+      </div></div>
+    </li>
+  </ul>
+</div>
+</div>
