@@ -5,8 +5,8 @@ angular.module('Data')
 .controller('ItemsListController', ItemsListController);
 
 
-ItemsListController.$inject = ['MenuDataService','foundItems'];
-function ItemsListController(MenuDataService,foundItems) {
+ItemsListController.$inject = ['foundItems'];
+function ItemsListController(foundItems) {
   var itemsList = this;
   itemsList.foundItems = foundItems;
 
