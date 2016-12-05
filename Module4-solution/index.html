@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="src/data.module.js"></script>
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/data.controller.js"></script>
+    <script src="src/menuapp.controller.js"></script>
+    <script src="src/menudata.service.js"></script>
+    <script src="src/routes.js"></script>
+    <script src="src/categories/categories.component.js"></script>
+    <script src="src/categories/categorieslist.controller.js"></script>
+    <script src="src/categories/items.component.js"></script>
+    <script src="src/categories/itemslist.controller.js"></script>
+
+  </head>
+<body ng-app="MenuApp">
+  <nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><a href="#"><h2>Welcome to the Yellow Sun Asian Restaurant</h2></a></li>
+  </ul>
+</nav>
+  <div class="container">
+
+
+  <ui-view></ui-view>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<ul class="nav nav-pills" role="tablist">
+  <li class="active"><a ui-sref="home">Home</a></li>
+  <li class="active"><a ui-sref="categoriesList">Categories</a></li>
+</ul>
+
+<h3>Details </h3>
+<ul class="list-group">
+  <li  class="list-group-item list-group-item" ng-repeat="item in itemDetail.foundItems">
+    <div class="row">
+      <div class="col-md-1"><span class="badge">{{ item.id }}</span></div>
+      <div class="col-md-3">{{ item.name }}</div>
+      <div class="col-md-4">{{ item.description }}</div>
+    </div>
+  </li>
+</ul>
