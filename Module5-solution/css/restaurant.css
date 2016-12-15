@@ -9,6 +9,23 @@ body {
   margin-top: 60px;
 }
 
+#popover1 {
+  color:black;
+}
+
+
+.pop-content {
+  display:none;
+    color: red;
+    font-size: 10px;
+}
+
+.popover .popover-title {background-color: white; color: black;}
+.popover .popover-content {background-color: white;  color: black;}
+
+.arrow {
+  shape-margin: 0;
+}
 /** HEADER **/
 #header-nav {
   background-color: #f6b319;
@@ -48,6 +65,26 @@ body {
 }
 .navbar-brand p span { /* Star-K */
   vertical-align: middle;
+}
+
+#SignUpModal, #SignInfoModal2, #SignInfoModal, #MessageAlertModal {
+  font-family: 'Oxygen', sans-serif;
+  color: #557c3e;
+}
+
+#InfoShowFooterMessage h4  {
+  text-align: left;
+  float: left;
+}
+
+#InfoShowFooterMessage2 h4  {
+  text-align: left;
+  float: left;
+}
+
+.modal-body {
+  font-size: .8em;
+  color: black;
 }
 
 #nav-list {

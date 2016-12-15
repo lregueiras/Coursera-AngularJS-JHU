@@ -1,0 +1,58 @@
+<div modal="showModal" close="cancel()">  <!--ng-if="ictrl.user.foundespecifico !== undefined && ictrl.user.foundespecifico != null">-->
+  <div class="modal-dialog modal-lg" id="SignInfoModal">
+    <div class="modal-content">
+
+    <div class="modal-header">
+        <h3>Sign Up Information</h3></div>
+
+        <div class="modal-body">
+        <table>
+        <tr>
+        <td><strong>First name:&nbsp</strong>
+          {{ ictrl.user.firstname }}  </td>
+      </tr>
+
+        <tr>
+        <td><strong>Last name:&nbsp</strong>
+            {{ ictrl.user.lastname }}  </td>
+          <td>
+        </tr>
+
+        <tr>
+        <td><strong>Email:&nbsp</strong>
+          {{ ictrl.user.email }}  </td>
+      </tr>
+
+      <tr>
+      <td><strong>Phone Number:&nbsp</strong>
+          {{ ictrl.user.phone }}  </td>
+        </tr>
+
+        <!--When showing the favorite menu item, display the picture of the menu item as well as its title and description.-->
+        <tr>
+        <td><strong>Favorite dish:</strong></td></tr>
+        <tr><td><em>{{ ictrl.user.foundespecifico.name }}</em></td></tr>
+        <tr><td>
+        <img class="img-responsive" width="250" height="150" ng-src="{{ictrl.basePath}}/images/{{ictrl.user.foundespecifico.short_name}}.jpg" alt="{{ictrl.user.foundespecifico.name}}">
+        </td></tr>
+        <tr>
+        <td>{{ ictrl.user.foundespecifico.description }}</td></tr>
+      </tr>
+
+
+          </table>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" ng-click="ictrl.cancel()">Ok</button>
+          </div></div>
+
+        </div>
+
+        </div>
+
+<!--
+        <div ng-controller="ShowCtrl as sctrl" ><h4>Not Signed Up Yet. <a href="#" ng-click="sctrl.open()">Sign up Now!</a>
+           <ng-include src="my-SignUp.html"></ng-include></h4>
+            <button class="btn btn-success" ng-click="cancel()">Ok</button>
+
+        </div> -->
