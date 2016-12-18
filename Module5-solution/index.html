@@ -75,15 +75,15 @@
             </ul><!-- #nav-list -->
 
           </div><!-- .collapse .navbar-collapse -->
-          <div ng-controller="ShowCtrl as sctrl">
+          
           <!-- <div ng-hide="ictrl.user.foundespecifico !== undefined && ictrl.user.foundespecifico != null"> -->
 
           <!-- <div ng-show="ictrl.mensagemAlerta===33 && (sctrl2.mensagemAlerta==undefined || sctrl2.mensagemAlerta==null)" ng-controller="ShowCtrl as sctrl2"> -->
-            <div ng-show="restctrl.mensagens===33">
+            <div ng-show="restctrl.mensagens===33" ng-controller="ShowCtrl as sctrl">
                   <div class="alert alert-success">
                     <h4>Not Signed Up Yet. <a href="#" ng-click="sctrl.open()">Sign up Now!</a></h4>
                     <my-signup></my-signup>
-                </div></div>
+                </div>
           </div>
         </div><!-- .container -->
       </nav><!-- #header-nav -->
