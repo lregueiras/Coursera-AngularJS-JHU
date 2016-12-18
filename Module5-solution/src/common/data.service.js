@@ -32,7 +32,9 @@ function DataService() {
         email:objeto.email,
         phone:objeto.phone,
         itemespecifico:objeto.itemespecifico,
-        foundespecifico:objeto.foundespecifico
+        foundespecifico:objeto.foundespecifico,
+        myVar:objeto.myVar
+
     };
     service.newFavoriteDish=objeto;
     return true;

@@ -9,40 +9,32 @@ angular.module('public')
 .directive('myInfosignup',MyInfosignup);
 
 
-InfoCtrl.$inject = ['$scope','DataService','ApiPath'];
- function InfoCtrl($scope,DataService,ApiPath) {
+InfoCtrl.$inject = ['$scope','DataService','mensagens','ApiPath'];
+ function InfoCtrl($scope,DataService,mensagens,ApiPath) {
    var ictrl = this;
-  //  if(ictrl.user.foundespecifico !== undefined && ictrl.user.foundespecifico != null) {$scope.showModal = false;}
-  //  else {$scope.showModal = true;};
-  //  ictrl.showModal = true;
 
   ictrl.basePath = ApiPath;
 
-  //ng-hide="ictrl.user.foundespecifico !== undefined && ictrl.user.foundespecifico != null"
 
   ictrl.open = function() {
 
     ictrl.user = DataService.getFavoriteDish();
-    console.log("Resultado");
-    console.log(angular.isUndefined(ictrl.user) || ictrl.user.foundespecifico  === null);
-    //if(ictrl.user.foundespecifico !== undefined && ictrl.user.foundespecifico != null)
+
     if (angular.isUndefined(ictrl.user) || ictrl.user.foundespecifico  === null)
                               {$scope.showModal = false;
-                              ictrl.mensagemAlerta=DataService.updateMessage(33);
+                              // ictrl.mensagemAlerta=DataService.updateMessage(33);
+                              mensagens=33;
+                              $scope.mensagens = mensagens;
+                              $scope.restctrl.mensagens = mensagens;
                               }
     else {
-          ictrl.mensagemAlerta=DataService.updateMessage(44);
+          // ictrl.mensagemAlerta=DataService.updateMessage(44);
+          mensagens=44;
+          $scope.mensagens = mensagens;
+          $scope.restctrl.mensagens = mensagens;
           $scope.showModal = true;
          };
   };
-
-  // ictrl.open = function() {
-  //   //ictrl.myVar = true;
-  //
-  //   ictrl.user = DataService.getFavoriteDish();
-  //
-  //   $scope.showModal = true;
-  // };
 
   ictrl.ok = function() {
     $scope.showModal = false;

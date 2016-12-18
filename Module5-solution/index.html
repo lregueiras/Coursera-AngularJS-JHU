@@ -17,8 +17,9 @@
     <loading class="loading-indicator"></loading>
 
     <header ng-controller="restaurantCtrl as restctrl">
-      <nav id="header-nav" class="navbar navbar-default"  ng-controller="InfoCtrl as ictrl">
-        <div class="container" ng-controller="ShowCtrl as sctrl" >
+      <nav id="header-nav" class="navbar navbar-default" >
+        <!-- <div class="container" ng-controller="ShowCtrl as sctrl" > -->
+        <div class="container">
           <div class="navbar-header" >
             <a href="index.html" class="pull-left visible-md visible-lg">
               <div id="logo-img" alt="Logo image"></div>
@@ -51,22 +52,22 @@
                 <a ui-sref="public.menu">
                   <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
               </li>
-                  <li>
+                  <li ng-controller="InfoCtrl as ictrl">
                     <!-- <a href="#" id="popover1" data-container="body" data-toggle="popover" title="Popover Header" html=true>
                     <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> My Info</a> -->
 
                     <!-- <a href="#" ng-click="ictrl.open()"> -->
                     <a href="#" ng-click="ictrl.open()">
-                      <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> My Info</a>{{ictrl.mensagemAlerta}}sss
+                      <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> My Info</a>
                         <my-infosignup></my-infosignup>
                   </li>
 
-                  <li>
+                  <li ng-controller="ShowCtrl as sctrl">
                     <a href="#" ng-click="sctrl.open()">
                       <span class="glyphicon glyphicon-pencil" ></span><br class="hidden-xs"> Sign Up</a>
                           <my-signup></my-signup>
                   </li>
-                  {{sctrl.user.firstname}}
+
               <li id="phone" class="hidden-xs">
                 <a href="tel:410-602-5008">
                   <span>410-602-5008</span></a><div>* We Deliver</div>
@@ -74,12 +75,15 @@
             </ul><!-- #nav-list -->
 
           </div><!-- .collapse .navbar-collapse -->
+          <div ng-controller="ShowCtrl as sctrl">
           <!-- <div ng-hide="ictrl.user.foundespecifico !== undefined && ictrl.user.foundespecifico != null"> -->
-          {{ictrl.mensagemAlerta}}rrrr
-          {{sctrl.mensagemAlerta}}ffff
-          <div ng-show="ictrl.mensagemAlerta===33 && (sctrl.mensagemAlerta==undefined || sctrl.mensagemAlerta===null)">
 
-          <div class="alert alert-success"><h4>Not Signed Up Yet. <a href="#" ng-click="sctrl.open()">Sign up Now!</a></h4><my-signup></my-signup>"</div>
+          <!-- <div ng-show="ictrl.mensagemAlerta===33 && (sctrl2.mensagemAlerta==undefined || sctrl2.mensagemAlerta==null)" ng-controller="ShowCtrl as sctrl2"> -->
+            <div ng-show="restctrl.mensagens===33">
+                  <div class="alert alert-success">
+                    <h4>Not Signed Up Yet. <a href="#" ng-click="sctrl.open()">Sign up Now!</a></h4>
+                    <my-signup></my-signup>
+                </div></div>
           </div>
         </div><!-- .container -->
       </nav><!-- #header-nav -->
