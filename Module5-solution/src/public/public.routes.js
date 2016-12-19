@@ -41,17 +41,6 @@ function routeConfig ($stateProvider) {
         }]
       }
     })
-    // .state('public.menuitemsespecifico', {
-    //   url: '/menu/menuitemsespecifico',
-    //   templateUrl: 'my-SignUp.html',
-    //   controller: 'ShowCtrl',
-    //   controllerAs: 'sCtrl',
-    //   resolve: {
-    //     foundespecifico: ['$stateParams','DataService', function ($stateParams, DataService) {
-    //       return logMenuItems();
-    //     }]
-    //   }
-    // })
     ;
 }
 })();

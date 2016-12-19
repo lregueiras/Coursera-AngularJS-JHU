@@ -19,10 +19,6 @@ ShowCtrl.$inject = ['$scope','MenuService','mensagens','DataService'];
 
     sctrl.user = DataService.getFavoriteDish();
 
-    mensagens=0;
-    $scope.mensagens = mensagens;
-    $scope.restctrl.mensagens = mensagens;
-
     //
     $scope.showModal = true;
     sctrl.mensagemRegisto="Your information is already saved."
@@ -30,10 +26,16 @@ ShowCtrl.$inject = ['$scope','MenuService','mensagens','DataService'];
   };
 
   sctrl.ok = function() {
+    mensagens=0;
+    $scope.mensagens = mensagens;
+    $scope.restctrl.mensagens = mensagens;
     $scope.showModal = false;
   };
 
   sctrl.cancel = function() {
+    mensagens=0;
+    $scope.mensagens = mensagens;
+    $scope.restctrl.mensagens = mensagens;
     $scope.showModal = false;
   };
 
@@ -69,11 +71,6 @@ function MySignup() {
   return {
     restrict: 'AE',
     scope: true,
-
-    // scope : {
-    //         showModal:"=", //getting value from controller
-    //         action: '&'
-    //     },
     templateUrl: 'my-SignUp.html',
     bindToController: true
   };
