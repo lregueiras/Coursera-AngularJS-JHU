@@ -24,17 +24,10 @@ function config($urlRouterProvider) {
 restaurantCtrl.$inject = ['$scope','mensagens','DataService'];
 function restaurantCtrl($scope,mensagens,DataService) {
     var restctrl=this;
-    console.log("restaurante ");
-    console.log(mensagens);
+
     mensagens=15;
-    console.log("restaurante ");
-    console.log(mensagens);
+
     $scope.mensagens = mensagens;
-    // console.log(restctrl.mensagemAlerta);
-    // restctrl.mensagemAlerta=DataService.setMessage();
-    // console.log(restctrl.mensagemAlerta);
-    // restctrl.mensagemAlerta=DataService.updateMessage(10);
-    // console.log(restctrl.mensagemAlerta);
 
     restctrl.mensag = function() {
 
